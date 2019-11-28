@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Government Of India | Disaster Management</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script src="scripts/jquery-3.3.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <link href="Content/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <!-- <script src="scripts/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+</head>
+
+<body style="background-color:black;">
+    <nav class="navbar navbar-default navbar-fixed-top" style="height: 110px; top: 0px;">
+        <div class="container abc">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="images/download.jpg" class="logo" />
+                <a class="navbar-brand nav-tt" href="#"> Government Of India | Disaster Management</a>
+            </div>
+        </div>
+        <br />
+        <br />
+    </nav>
+    <br />
+    <br />
+    <br />
+    <div class="hdivider">
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <div class="container-fluid">
+        <div class="col-lg-offset-1 col-lg-11 bank_form">
+            <h2 class="text-center">GOVERNMENT PORTAL TO REQUEST FUNDS FROM BANK</h2>
+            <br />
+            <br />
+
+            <div class="form-horizontal" style="font-size:x-large">
+                <label class="form-group-lg">Portal's Account Hash : </label>
+
+                <input type="text" placeholder="Enter account hash in the form 0x00" name="name" value=""
+                    class="form-control" style="height:50px" id="hash" />
+                <br />
+
+                <label class="form-group-lg"> Amount required in ethers : </label>
+                <input type="text" name="name" id="amt" value="" placeholder="0.0" class="form-control"
+                    style="height:50px" />
+                <br />
+
+                <button class="btn-lg btn-primary" style="margin-left:20%;" id="req" disabled>SEND REQUEST</button>
+                <button class="btn-lg btn-primary" style="margin-left:10%; display: inline-block;"
+                    id="cnf">CONFIRM</button>
+                <br>
+                <p id="msg" class="text-center"></p>
+                <p id="tx" class="text-center" style="font-size: 18px;">Please note the transaction hash after request
+                    for furthur verification.</p>
+            </div>
+        </div>
+        <img src="images/buy-ethereum.jpg" style="position: relative;
+        top: 30px;
+        left: 150px;
+        width: 570px;
+        height: 550px;
+        border-radius: 2%;" />
+    </div>
+    <br />
+    <div class="fdivider" style="top: 280px; margin-top: -150px; background-color: lightgray !important;">
+        <div class="footer-copyright copy"
+            style="font-size:18px;font-size: 18px; position: relative; left: -890px;color: black; top: 20px;">
+            © 2018 Copyright: Government of India | Disaster Management
+        </div>
+    </div>
+    <script>
+        $("#cnf").click(function () {
+            $("#req").removeAttr("disabled");
+        })
+        $("#req").click(function () {
+            var hashV = $("#hash").val();
+            var amt = $("#amt").val().toString();
+            console.log(hashV, amt);
+            var bankhash = "0x275Db351EDE5f9CDA8BFD53d8EA0D43057Ae2601";
+            web3 = new Web3(web3.currentProvider);
+            if (hashV == "" || amt == "") {
+                swal("Notification", "Fields are empty!", "error").then((value) => {
+                    if (value == true) {
+                        location.reload(true);
+                    }
+                })
+            }
+            else {
+                try {
+                    var tx = web3.eth.sendTransaction({
+                        from: bankhash,
+                        to: hashV,
+                        value: window.web3.toWei(amt, "ether")
+                    }, function (err, transactionHash) {
+                        if (!err) {
+                            console.log(transactionHash);
+                            $("#msg").html("Requested amount will be processed soon!");
+                            $("#hash").html("");
+                            $("#amt").html("");
+                            $("#tx").html("Your transaction hash is : " + transactionHash);
+                        }
+                        else {
+                            swal("Notification", "Please provide correct data!", "error").then((value) => {
+                                if (value == true) {
+                                    location.reload(true);
+                                }
+                            })
+                        }
+                    })
+                } catch{
+                    swal("Notification", "Invalid Portal address!", "error").then((value) => {
+                        if (value == true) {
+                            location.reload(true);
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

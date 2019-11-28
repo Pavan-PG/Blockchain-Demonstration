@@ -1,0 +1,88 @@
+.copy
+{
+    font-size: larger;
+    color: darkgray;
+    top: 25px;
+    position: relative;
+    left: 10px;
+}
+.channel_text
+{
+    position: relative;
+    background-color: honeydew;
+    border: 1px solid darkgray;
+    border-radius: 2%;
+    top: 105px;
+    left: -260px;
+    width: 1699px;
+    height: 400px;
+}
+.channel_btn
+{
+        position: relative;
+    top: -48px;
+    left: 1545px;
+    width: 150px;
+    height: 60px;
+    font-size: x-large;
+}
+.channel_inp{
+    position: relative;
+    top: 10px;
+    left: 1px;
+    height: 60px;
+    width:1500px;
+}
+.channel_cap
+{
+    font-size: x-large;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.chart
+{
+        position: relative;
+    left: 655px;
+    top: -295px;
+    width: 490px;
+    margin-bottom: -297px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+li {
+    margin: 0;
+    margin-bottom: 1.3rem;
+    list-style: none;
+}
+
+li span.account {
+    color: #444;
+    font-weight: bold;
+    font-size: .9rem;
+    display: block;
+    white-space: nowrap;
+}
+
+li span.time {
+    color: #666;
+    font-size: .8rem;
+    display: block;
+}
+
+.form-row {
+    width: 100%;
+}
+
+#chat-area {
+    height: 300px;
+    padding: 20px;
+    top:105px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: auto;
+}

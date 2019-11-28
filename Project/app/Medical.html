@@ -1,0 +1,295 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Of India | Disaster Management</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+            #header    { width: 100%;height: 25px; float: left; font:14px Verdana;font-weight:bold}
+            </style>
+</head>
+
+<body style="overflow-x:hidden">
+    <nav class="navbar navbar-default navbar-fixed-top" style="height: 110px; top: 0px;">
+        <div class="container abc">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="images/download.jpg" class="logo" />
+                <a class="navbar-brand nav-tt" href="#"> Government Of India | Disaster Management</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="position: relative;top: -120px;">                            
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><button class="btn btn-lg btn-default nav-tab" onclick="reqfunds()">REQUEST FUNDS</button></a></li>
+                    <li><a href="IPFS.html"><button class="btn btn-lg btn-default nav-tab">IPFS</button></a></li>
+
+                    <li><SPAN><i style="position:relative; top:0px; font-size:46px;">|</i></SPAN></li>
+                    <li><a href="Medical.html" style="position:relative; top: 15px;">MEDICAL DEPARTMENT</a></li>                    
+
+                    <img src="images/icons8-doctors-bag-96.png" class="icon" /> 
+                </ul>
+            </div>
+
+        </div>
+        <br />
+        <br />
+    </nav>
+    <br />
+    <br />
+    <br />
+    <div class="hdivider">
+
+    </div>
+
+    <br />
+    
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <div style="POSITION: RELATIVE;    TOP: 70PX;    LEFT: 300PX">
+                <h3 style="display:inline">MESSAGES</h3> &nbsp; 
+                <span class="badge badge-light bad" id="msgcount">0</span>
+               
+            </div>
+
+        </div>
+
+        <div class="col-lg-12" style="margin-bottom:-150px;">
+            <div class="col-lg-offset-1 col-lg-2">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mess" id="listofstuff">
+                            <br/>
+               
+                            <div class="container-fluid col-lg-10 section5">
+                                <p>COUNTRY CODE : IN </p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : KA</p>
+                                <p>REGION NAME : KARNATKA</p>
+                                <p>CITY : BANGALORE</p>
+                                <p>LATTITUDE AND LONGITUTDE : 12.9716° N, 77.5946° E </p>
+                                <p>TEMPERATURE : 34 </p>
+                                <p>WIND SPEED : 4km/hr</p>
+                                <p>SKY AND SURROUNDINGS : SCATTERED CLOUDS </p>
+                                <p>HUMIDITY : 40% </p>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="container-fluid col-lg-10 section6">                                
+                                <p>COUNTRY CODE : IN</p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : TN</p>
+                                <p>REGION NAME : TAMIL NADU</p>
+                                <p>CITY : CHENNAI</p>
+                                <p>LATTITUDE AND LONGITUTDE : 42.4623° N, 33.3498° W </p>
+                                <p>TEMPERATURE : 38</p>
+                                <p>WIND SPEED : 5km/hr</p>
+                                <p>SKY AND SURROUNDINGS : PARTLY CLOUDY</p>
+                                <p>HUMIDITY : 50% </p>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="container-fluid col-lg-10 section5">                                
+                                <p>COUNTRY CODE : IN</p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : MH</p>
+                                <p>REGION NAME : MAHARASHTRA</p>
+                                <p>CITY : MUMBAI</p>
+                                <p>LATTITUDE AND LONGITUTDE : 19.0760° N, 72.8777° E </p>
+                                <p>TEMPERATURE : 32</p>
+                                <p>WIND SPEED : 5km/hr</p>
+                                <p>SKY AND SURROUNDINGS : CLOUDY</p>
+                                <p>HUMIDITY : 80% </p>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="container-fluid col-lg-10 section6">                                
+                                <p>COUNTRY CODE : IN</p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : KL</p>
+                                <p>REGION NAME : KERALA</p>
+                                <p>CITY : KOCHI</p>
+                                <p>LATTITUDE AND LONGITUTDE : 9.9312° N, 76.2673° E </p>
+                                <p>TEMPERATURE : 40</p>
+                                <p>WIND SPEED : 4km/hr</p>
+                                <p>SKY AND SURROUNDINGS : SCATTERED CLOUDS</p>
+                                <p>HUMIDITY : 50% </p>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="container-fluid col-lg-10 section5">                                
+                                <p>COUNTRY CODE : IN</p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : RJ</p>
+                                <p>REGION NAME : RAJASTHAN</p>
+                                <p>CITY : JAIPUR</p>
+                                <p>LATTITUDE AND LONGITUTDE : 26.9124° N, 75.7873° E</p>
+                                <p>TEMPERATURE : 47</p>
+                                <p>WIND SPEED : 6km/hr</p>
+                                <p>SKY AND SURROUNDINGS : SUNNY</p>
+                                <p>HUMIDITY : 20% </p>
+
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div class="container-fluid col-lg-10 section6">
+                                <p>COUNTRY CODE : IN</p>
+                                <p>COUNTRY NAME : INDIA</p>
+                                <p>REGION CODE : DL</p>
+                                <p>REGION NAME : DELHI</p>
+                                <p>CITY : DELHI</p>
+                                <p>LATTITUDE AND LONGITUTDE : 28.7041° N, 77.1025° E</p>
+                                <p>TEMPERATURE : 42</p>
+                                <p>WIND SPEED : 1km/hr</p>
+                                <p>SKY AND SURROUNDINGS : SUNNY</p>
+                                <p>HUMIDITY : 30% </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+                
+            <div class="col-lg-offset-1 col-lg-8 map_medical">
+                    <h3 style="display:inline; text-align: center;"> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Locations on map where requests are being sent.</h3> &nbsp;
+                    <div id="map" style="width: 855px; height: 600px;"></div>
+                    
+                </iframe>
+             
+
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-lg-4">
+                <a href="government_channel.html"><button class="btn btn-lg btn-default btn-req" style="top: 120px; left: 240px;">COMMUNICATE TO GOVERNMENT</button></a>
+                <a href="medical_channel.html"><button class="btn btn-lg btn-default btn-req" style="top: 120px; left: 240px;">ACCESS MEDICAL CHANNEL</button></a>
+        </div>
+        <div class="col-lg-offset-1 col-lg-6">
+           
+                <div class="lat_long">
+                    <label>LATITUDE : </label>
+                    <input type="text" name="name" value="" id="lat"/> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                    <label> LONGITUDE : </label>
+                    <input type="text" name="name" value="" id="lng"/>
+                </div>
+                
+                <button class="btn-lg btn-primary pos_btn" style="display:block" onclick="buttonClick()">GET POSITION</button>
+                <br />
+                <br />
+                <h4 style="POSITION: relative; top: 150px;left: 230px;">(ACCESS YOUR ACCOUNT THROUGH METAMASK EXTENSION IN BROWSER)</h4>
+            
+        </div>
+        
+
+    </div>    
+    <div class="fdivider" style="top:230px; margin-top:-1px">
+        <div class="footer-copyright copy">
+            © 2018 Copyright: Government of India | Disaster Management
+        </div>
+    </div>
+    <script>
+            $(document).ready(function(){
+                   var objDiv = document.getElementById("listofstuff");
+                   var num = 0;
+                   window.setInterval(scrolleve, 4000);
+                       // objDiv.scrollTop = objDiv.scrollHeight;
+                   function scrolleve(){
+                   num+=1;
+                   $("#msgcount").html(num);
+                   $('#listofstuff').animate({scrollTop: objDiv.scrollHeight}, 20000); 
+                   var scrollBottom = $("#listofstuff").scrollTop() + $("#listofstuff").height();
+                   $('#listofstuff').animate({scrollTop: scrollBottom-1000}, 20000);
+                   }
+               });
+           </script>
+           <script>
+       
+               var map = L.map('map').setView([42.736424, -73.762713], 8);  
+               
+               var osm=new L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{ 
+                           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
+               osm.addTo(map);
+               
+               // used to populate the two textboxes
+               var theSampleLat = [12.9716,42.4623,19.0760,9.9312,26.9124,28.7041];
+               var theSampleLng = [77.5946,33.3498,72.8777,76.2673,75.7873,77.1025];
+               var myVar = setInterval(myTimer, 3000);
+               var i = -1;
+               function myTimer(){
+                   i+=1;
+                   L.marker([theSampleLat[i],theSampleLng[i]]).addTo(map)
+                   .bindPopup("Your point is at " + theSampleLat[i]+", "+theSampleLng[i]).openPopup();
+                   map.setView([theSampleLat[i],theSampleLng[i]], 18);
+                   if(i==5)
+                   {
+                       clearInterval(myVar);
+                   }
+               }
+               
+               function buttonClick(){
+                   //Get values from textboxs
+                   var theLat = document.getElementById("lat").value;
+                   var theLng = document.getElementById("lng").value;
+               
+                   if(theLat==""||theLng=="")
+                   {
+                    swal("Notification", "Fields are empty!", "error");
+                   }
+                   else{
+               
+                   //Make marker
+                   L.marker([theLat,theLng]).addTo(map)
+                   .bindPopup("Your point is at " + theLat+", "+theLng).openPopup();
+               
+                   map.setView([theLat,theLng], 18);
+                   }
+               
+               };
+               
+               </script>
+               <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+               <script>
+               function reqfunds(){
+                   swal("Requesting Funds!", "You request is in process.", "success").then((value)=>{
+                       if(value==true)
+                       {
+                           parent.location='funding_departments.html';
+                       }
+                   })
+       
+               }
+               </script>
+</body>
+</html>

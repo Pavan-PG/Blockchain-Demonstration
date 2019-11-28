@@ -1,0 +1,48 @@
+{
+  "contracts": ["contracts/**"],
+  "app": {
+    "css/style.css": ["app/css/style.css"],
+    "css/just.css": ["app/css/just.css"],
+    "css/bootstrap.min.css": ["app/css/bootstrap.min.css"],
+    "css/StyleSheet.css":["app/css/StyleSheet.css"],
+    "js/gov.js": ["app/js/gov.js"],
+    "js/med.js": ["app/js/med.js"],
+    "js/food.js": ["app/js/food.js"],
+    "js/bootstrap.min.js": ["app/js/bootstrap.min.js"],
+    "js/jquery-3.3.1.min.js": ["app/js/jquery-3.3.1.min.js"],
+    "js/trans.js": ["app/js/trans.js"],
+    "js/shel.js": ["app/js/shel.js"],
+    "images/": ["app/images/**"],
+    "index.html": "app/index.html",
+    "IPFS.html": "app/IPFS.html",
+    "Bank.html": "app/Bank.html",
+    "Food.html": "app/Food.html",
+    "Forecast.html": "app/Forecast.html",
+    "Medical.html": "app/Medical.html",
+    "Message.html": "app/Message.html",
+    "Shelter.html": "app/Shelter.html",
+    "Transport.html": "app/Transport.html",
+    "Crowd_Funding.html": "app/Crowd_Funding.html",
+    "Funding_Departments.html": "app/Funding_Departments.html",
+    "medical_channel.html":"app/medical_channel.html",
+    "food_channel.html":"app/food_channel.html",
+    "shelter_channel.html":"app/shelter_channel.html",
+    "transport_channel.html":"app/transport_channel.html",
+    "government_channel.html":"app/government_channel.html"
+  },
+  "buildDir": "dist/",
+  "config": "config/",
+  "versions": {
+    "web3": "1.0.0-beta",
+    "solc": "0.4.25",
+    "ipfs-api": "17.2.4"
+  },
+  "plugins": {
+  },
+  "options": {
+    "solc": {
+      "optimize": true,
+      "optimize-runs": 200
+    }
+  }
+}

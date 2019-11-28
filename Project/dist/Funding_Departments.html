@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Government Of India | Disaster Management</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="css/StyleSheet.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.mdb-select').materialSelect();
+                $('.select-wrapper.md-form.md-outline input.select-dropdown').bind('focus blur', function () {
+                    $(this).closest('.select-outline').find('label').toggleClass('active');
+                    $(this).closest('.select-outline').find('.caret').toggleClass('active');
+                });
+            });
+        </script>
+    </head>
+
+    <body style="background-color:black; overflow-x:hidden;">
+        <nav class="navbar navbar-default navbar-fixed-top" style="height: 110px; top: 0px;">
+            <div class="container abc">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/download.jpg" class="logo" />
+                    <a class="navbar-brand nav-tt" href="#"> Government Of India | Disaster Management</a>
+                    
+                </div>
+
+
+            </div>
+            <br />
+            <br />
+        </nav>
+        <br />
+        <br />
+        <br />
+        <div class="hdivider">
+
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div class="col-lg-offset-1 container-fluid">
+
+            <div class="trans">
+                <h3 class="text-capitalize text-center" id="txhead">TRANSACTION REPORT</h3>
+                <img src="images/info.jpg" id="tximage" class="yes" />
+                <br />
+                <br />
+                <br />
+                <h3 class="text-capitalize text-center font-weight-bold">IMPORTANT INFORMATION</h3>
+                <p class="text-center" id="msg" style="font-size:20px">Please note your transaction hash after your funding to know your
+                    transaction
+                    status.</p>
+
+            </div>
+            <div class="col-lg-11 bank_form" style="margin-top: -485px; height:620px; background-color: honeydew">
+                <h2 class="text-center">DEPARTMENTS FUNDING PORTAL</h2>
+<br>
+                <div class="form-horizontal" style="font-size:x-large">
+                    <label class="form-group-lg">AVAILABLE BALANCE IN GOVERNMENT WALLET SYSTEM<h3 id="bal" class="form-group-lg"></h3></label>
+                    <h3>Select the department to fund.</h3>
+                    <div class="btn-group">
+                        <div class="row">
+                            <div class="col-md-6 select-outline">
+                                <label>Departments</label>
+                                <select class="mdb-select md-form md-outline colorful-select dropdown-primary"
+                                    id="deptop">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Medical</option>
+                                    <option value="2">Transport</option>
+                                    <option value="3">Shelter</option>
+                                    <option value="4">Food</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+
+                    <label class="form-group-lg">AMOUNT IN ETHERS : </label>
+                    <input type="text" name="name" value="" class="form-control" id="amt" placeholder="0.0"
+                        style="height:50px" />
+                        <br>
+                    <button class="btn-lg btn-primary" id="update" style="margin-left:7%">Update Available balance</button>
+                    <button class="btn-lg btn-primary" style="margin-left:5%;" id="req" disabled>Transfer
+                        Funds</button>
+                    <button class="btn-lg btn-primary" style="margin-left:5%; display: inline-block;"
+                        id="cnf">CONFIRM</button>
+                    <br>
+                    <br>
+                    <p id="tx" class="text-center" style="font-size: 18px;"></p>
+                </div>
+
+                <br />
+
+
+
+            </div>
+        </div>
+
+        </div>
+        <script>
+            $(document).ready(function () {
+                web3 = new Web3(web3.currentProvider);
+                web3.eth.getBalance("0xDa30557993049928eCD3152E155787c38633C4ea", (err, balance) => {
+                    balance = window.web3.fromWei(balance, "ether") + " ETH";
+                    if (balance == "0 ETH") {
+                        swal("Notification", "Insufficient Funds. Please Contact Bank!", "error").then((value)=>{
+                       if(value==true)
+                       {
+                        location.reload(true);
+                       }
+                   })
+                    }
+                    else
+                        $("#bal").html(balance);
+                });
+            })
+        </script>
+        <script>
+            $("#cnf").click(function () {
+                $("#req").removeAttr("disabled");
+            })
+            $("#req").click(function () {
+                var dept = $("#deptop option:selected").text();
+                console.log(dept);
+                var amt = $("#amt").val().toString();
+                var govhash = "0xDa30557993049928eCD3152E155787c38633C4ea";
+                var medicalhash = "0x8058Da523e791A2F2a991F3a5f18BAbc7Ea9E7a5";
+                var transhash = "0x87FbD216A9B59a0F952c9870142fB160b7563d6F";
+                var shelterhash = "0x0866cF6DE3c00fb1bF0e14b14FBC48FBfEBdfed4";
+                var foodhash = "0xbA1B68DB25DF51E83663eB3D0d6EEB196A230f8f";
+                var towhom = "";
+                if (dept == "Medical") {
+                    towhom = medicalhash;
+                }
+                else if (dept == "Transport") {
+                    towhom = transhash;
+                }
+                else if (dept == "Shelter") {
+                    towhom = shelterhash;
+                }
+                else if (dept == "Food") {
+                    towhom = foodhash;
+                }
+                web3 = new Web3(web3.currentProvider);
+                if (amt == "" || dept == "Choose your option") {        
+                    swal("Notification", "Please fill or select the required data!", "error").then((value)=>{
+                       if(value==true)
+                       {
+                        location.reload(true);
+                       }
+                   })
+                }
+                else {
+                    try {
+                    	if(window.ethereum)
+                    	{
+                    		window.web3 = new Web3(ethereum);
+
+        try {
+            // Request account access if needed
+            window.ethereum.enable();
+            console.log("ethereum is now enabled!");
+            // Acccounts now exposed
+        } catch (error) {
+            console.log("Account access denied!");
+        }
+                    	}
+                        var tx = web3.eth.sendTransaction({
+                            from: govhash,
+                            to: towhom,
+                            value: window.web3.toWei(amt, "ether")
+                        }, function (err, transactionHash) {
+                            if (!err) {
+                                console.log(transactionHash);
+                                $("#msg").html("Requested amount will be processed soon! Note your transaction Hash and refresh this page!<br>Transaction Hash is provided only once!");
+                                $("#amt").html("");
+                                $("#tximage").attr("src", "images/icons8-ok-96.png");
+                                $("#tx").html("Your transaction hash is : " + transactionHash);
+                                $("#deptop option:selected").removeAttr("selected");
+                                $("#deptop").attr("value", "Choose your option");
+                                $("#txhead").html("TRANSACTION SUCCESSFUL");
+                                $("#req").attr("disabled",true);
+                                $("#cnf").attr("disabled",true);
+                               
+                            }
+                            else {
+                                $("#tximage").attr("src", "images/icons8-cancel-512.png");
+                                $("#txhead").html("TRANSACTION FAILED");
+                                $("#msg").html("Refresh the page or enter the correct details and try again!");
+                                $("#amt").html("");
+                                $("#deptop option:selected").removeAttr("selected");
+                                $("#deptop").attr("value", "Choose your option");
+                            }
+                        })
+                    } catch{
+                        swal("Notification", "Something went wrong. Please try again later!", "error");
+                    }
+                }
+            })
+            $("#update").click(function(){
+                web3 = new Web3(web3.currentProvider);
+                web3.eth.getBalance("0xDa30557993049928eCD3152E155787c38633C4ea", (err, balance) => {
+                                    balance = window.web3.fromWei(balance, "ether") + " ETH";
+                                    $("#bal").html(balance);
+                                });
+                swal("Notification", "Updated!", "success");
+            })
+        </script>
+
+
+
+        <br />
+        <div class="fdivider" style="top: 280px; margin-top: -220px; background-color: lightgray">
+            <div class="footer-copyright copy" style="font-size:18px;font-size: 18px; position: relative; left: 10px;color:black;top: 20px;">
+                © 2018 Copyright: Government of India | Disaster Management
+            </div>
+        </div>
+    </body>
+
+    </html>
+    <script>
+
+    </script>

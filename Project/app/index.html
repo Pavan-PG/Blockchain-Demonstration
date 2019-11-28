@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Government Of India | Disaster Management</title>
+    <meta charset="utf-8" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/just.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+<!-- 
+        <video width="100%" height="100%" src="https://www.youtube.com/embed/lwuKvmNQrRM" frameborder="0" allow="accelerometer; autoplay='true'; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video> -->
+   
+    
+        <nav class="navbar navbar-default" style="height: 110px; top: 0px;">
+        <div class="container abc">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="images/download.jpg" class="logo" />
+                <a class="navbar-brand nav-tt" href="#"> Government Of India | Disaster Management</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
+                style="position: relative;top: -120px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Forecast.html"><button class="btn btn-lg btn-default nav-tab">FORECAST</button></a>
+                    </li>
+                    <li><a href="IPFS.html"><button class="btn btn-lg btn-default nav-tab">IPFS</button></a></li>
+                    <li><a href="Bank.html"><button class="btn btn-lg btn-default nav-tab">BANK</button></a></li>
+                    <li><a href="Message.html"><button class="btn btn-lg btn-default nav-tab">MESSAGES</button></a></li>
+                    <li><a href="Funding_Departments.html"><button class="btn btn-lg btn-default nav-tab">FUND DEPARTMENTS</button></a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hdivider" style="top:-19px !important;">
+
+    </div>
+    <div class="container-fluid dept-align">
+        <div class="col-lg-12">
+            <div class="col-lg-3 dept">
+                <div class="row">
+                    <button class="btn btn-lg btn-warning btn-food" id="food_disp"></button>
+                    <p class="dept-name">FOOD</p>
+                </div>
+                <img src="images/icons8-ingredients-96.png" style="position: relative;top: -5px;left: 120px;" />
+                <div class="row">
+                    <a href="food_channel.html"><button class="btn btn-lg btn-default btn-req">COMMUNICATE</button></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 dept">
+                <div class="row">
+                    <button class="btn btn-lg btn-warning btn-food" id="med_disp"></button>
+                    <p class="dept-name" style="left:80px;">MEDICAL</p>
+                </div>
+                <img src="images/icons8-doctors-bag-96.png" style="position: relative;top: -5px;left: 120px;" />
+                <div class="row">
+                    <a href="medical_channel.html"><button
+                            class="btn btn-lg btn-default btn-req">COMMUNICATE</button></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 dept">
+                <div class="row">
+                    <button class="btn btn-lg btn-warning btn-food" id="trans_disp"></button>
+                    <p class="dept-name" style="left:55px;">TRANSPORT</p>
+                </div>
+                <img src="images/icons8-transportation-96.png" style="position: relative;top: -5px;left: 120px;" />
+                <div class="row">
+                    <a href="transport_channel.html"><button
+                            class="btn btn-lg btn-default btn-req">COMMUNICATE</button></a>
+
+                </div>
+            </div>
+            <div class="col-lg-3 dept">
+                <div class="row">
+                    <button class="btn btn-lg btn-warning btn-food" id="shel_disp"></button>
+                    <p class="dept-name" style="left:75px;">SHELTER</p>
+                </div>
+                <img src="images/icons8-home-96.png" style="position: relative;top: -5px;left: 120px;" />
+                <div class="row">
+                    <a href="shelter_channel.html"><button
+                            class="btn btn-lg btn-default btn-req">COMMUNICATE</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+        <button class="btn btn-lg btn-danger emg"
+            onclick="reqfunds()">EMERGENCY</button>
+    </div>
+    <br />
+    <div class="fdivider">
+        <div class="footer-copyright text-center py-3 foot_text">
+            © 2018 Copyright: Government of India | Disaster Management
+        </div>
+    </div>
+    <script>
+            window.setInterval(genrand, 3000);
+            function genrand(){
+            var food = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+            var shel = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+            var med = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+            var trans = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+            $("#food_disp").html(food);
+            $("#med_disp").html(med);
+            $("#trans_disp").html(trans);
+            $("#shel_disp").html(shel);
+            }
+    </script>
+    
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script>
+            function reqfunds(){
+                swal("Notification", "Notified to nearby government agency!", "success");
+            }
+            </script>
+</body>
+
+</html>

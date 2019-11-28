@@ -1,0 +1,361 @@
+﻿.abc
+{
+    font-family:sans-serif;
+    font-size:25px;
+    margin-right:40px;
+    position:relative;
+    top:20px;
+}
+.foot_text
+{
+        font-size: large;
+    color: darkgray;
+    top: 20px;
+    position: relative;
+    left: -610px;
+}
+.nav-tt
+{
+    position: relative;
+    right: 460px;
+    top: 10px;
+    color: #242424 !important;
+    font-family:Arial;
+    font-size: xX-large;
+}
+.logo
+{
+    position: relative;
+    height: 118px;
+    width: 140px;
+    top: -24px;
+    left: -1251px;
+}
+.nav-tab
+{
+    background-color:black;
+    color: white;
+    font-weight:500;
+    font-size:20px;
+}
+.nav-tab:hover
+{
+    background-color:ghostwhite;
+    color: black;
+
+}
+.hdivider{
+   
+    border: 3px solid black;
+    top: 49px;
+    position: relative;
+    background-color: black;
+    
+}
+body
+{
+    background-color: ghostwhite;
+}
+.dept
+{
+    position:relative;
+    height:320px;
+    width:400px;
+    border: 1px solid darkgray;
+    border-radius:2%;
+    background-color:honeydew;
+    margin-right:30px;
+    margin-left:4px;
+    opacity:0.8;
+}
+.dept-align
+{
+    position:relative;
+    margin-top:60px;
+}
+.btn-food
+{
+    position: relative;
+    left: 345px;
+}
+.dept-name
+{
+    position: relative;
+    margin-top: 0px;
+    color: gray;
+    font-size: 45px;
+    left: 125px;
+    font-family:sans-serif;
+}
+.btn-req
+{
+    width: 370px;
+    height: 75px;
+    position: relative;
+    font-size: 21px;
+    color:gray;
+    top: 15px;
+    left: 12px;
+
+}
+.emg 
+{
+        color: ghostwhite;
+    font-family: sans-serif;
+    font-size: 40px;
+    height: 70px;
+    width: 450px;
+    position: relative;
+    left: 650px;
+    top: 45px;
+}
+.fdivider 
+{
+    position:relative;
+    border: 1px solid black;
+    background-color: black;
+    width:100%;
+    height:70px;
+    top:200px;
+        margin-top: -60px;
+}
+.icon
+{
+        width: 50px;
+    position: relative;
+    top: 10px;
+}
+.card
+{
+    position:relative;
+    height:300px;
+    width:250px;
+    background-color:honeydew;
+    border: 1px solid darkgray;
+    border-radius:3%;
+}
+.weather_icon
+{
+    width: 140px;
+    position: relative;
+    left: 30px;
+    height: 125px;
+}
+.temp
+{
+    position: relative;
+    font-size: -webkit-xxx-large;
+    color: darkslategray;
+    left: 65px;
+    font-family: inherit;
+}
+.mess
+{
+    position: relative;
+    top: 75px;
+    margin-bottom: 60px;
+    left: -100px;
+    max-height: 665px;
+    overflow-x:hidden;
+    width: 650px;
+    overflow-y:scroll;
+    background-color: honeydew;
+    border: 1px solid darkgray;
+
+}
+.section1
+{
+    padding-top: 40px;
+    height: 150px;
+    color: darkslategray;
+    background-color: paleturquoise;
+
+}
+.section2
+{
+    padding-top: 40px;
+    height: 150px;
+    color: darkslategray;
+    background-color: skyblue;
+}
+.sec_img
+{
+    position:relative;
+    top:-20px;
+    width: 150px;
+    height: 110px;
+}  
+.sec_content
+{
+
+    font-style: oblique;
+    font-size: larger;
+    font-weight: bold;
+}
+.section3
+{
+ 
+       padding-top: 40px;
+       left:40px;
+       height: 500px;
+       position: relative;
+       top: -10px;
+       font-size: larger;
+       color: darkslategray;
+       padding-bottom:20px;
+       background-color: skyblue;
+
+}
+.section4
+{
+ 
+      padding-top: 40px;
+      left:40px;
+      position:relative;
+      font-size: larger;
+      top:10px;
+      height: 500px;
+      color: darkslategray;
+      background-color:paleturquoise ;
+
+}
+.map
+{
+        position: relative;
+    height: 665px;
+    width: 930px;
+    top: 76px;
+    left: 230px;
+    background-color: beige;
+}
+.img_map
+{
+    width: 990px;
+    position: relative;
+    left: 9px;
+    top: 27px;
+    height: 615px;
+}
+.def
+{
+    font-size:larger !important;
+}
+.map_medical
+{
+         position: relative;
+    height: 615px;
+    width: 883px;
+    top: 75px;
+    left: 265px;
+    background-color: beige;
+}
+.img_map_medical
+{
+    width: 785px;
+    position: relative;
+    left: 9px;
+    top: 30px;
+    height: 615px;
+}
+.bad
+{
+    font-size:28px;
+    top:-5px;
+    position:relative;
+    background-color:black;
+    color:white;
+    width:50px;
+    height:40px;
+
+}
+}
+.dot
+{
+    height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+ 
+}
+.count
+{
+          position: relative;
+    width: 250px;
+    height: 73px;
+    margin-left: -105px;
+    left: -251px;
+    font-size: x-large;
+    top: 350px;
+}
+.section5
+{
+ 
+       padding-top: 40px;
+       left:40px;
+       height: 400px;
+       position: relative;
+       top: 0px;
+       font-size: larger;
+       color: darkslategray;
+       padding-bottom:20px;
+       background-color: skyblue;
+
+}
+.section6
+{
+ 
+      padding-top: 40px;
+      left:40px;
+      position:relative;
+      font-size: larger;
+      top:10px;
+      height: 400px;
+      color: darkslategray;
+      background-color:paleturquoise ;
+
+}
+
+
+.bank_form
+{
+    background-color:lavender;
+    border:1px solid darkgray;
+    border-radius:3%;
+    width:750px;
+    height: 550px;
+    position:relative;
+    top:30px;
+}
+.trans
+{
+    position: relative;
+    top: 47px;
+    width: 450px;
+    left: 970px;
+    height: 500px;
+    background-color: beige;
+    border: 1px solid darkgray;
+    border-radius: 3%;
+}
+.yes
+{
+       display: block;
+    position: relative;
+    top: 40px;
+    left: 135px;
+    width: 170px;
+}
+.lat_long
+{
+        position: relative;
+    top: 110px;
+    font-size: larger;
+    left: 220px;
+}
+.pos_btn
+{
+        display: block;
+    position: relative;
+    top: 145px;
+    left: 490px;
+}
