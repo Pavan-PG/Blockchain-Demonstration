@@ -1,2 +1,4 @@
-# Disaster_management_Blockchain
-Concept of BlockChain is applied in disaster management and rescue operations.
+# Disaster Management Blockchain demonstration
+
+The concept of distributed ledger and shared coin use (Ethereum Framework) is illustrated.
+Dependencies: Embark.js, Python, Twilio API, PHP Server.
